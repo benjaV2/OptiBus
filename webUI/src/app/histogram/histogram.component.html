@@ -1,1 +1,12 @@
-<p>histogram works!</p>
+<div style="margin-left: 50px; display: flex;">
+    <ng-container *ngFor="let data_item of data">
+        <app-bar [barHeight]= "data_item" style="margin-left: 10px;"></app-bar>
+    </ng-container>
+
+
+    <app-bar [barHeight]= "0.5" style="margin-left: 10px;"></app-bar>
+    <app-bar [barHeight]= "0.8" style="margin-left: 10px;"></app-bar>
+    <app-bar [barHeight]= "0.5" style="margin-left: 10px;"></app-bar>
+
+</div>
+
