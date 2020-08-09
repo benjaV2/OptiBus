@@ -1,11 +1,11 @@
 
-<div style="margin-left: 50px;">
+<div *ngIf="data" style="margin-left: 50px;">
     <div style="display: flex;">
-        <div style="border-right:1px black solid; height: 220px;">
-            <div style="margin-right: 5px; margin-top: 20px;">
+        <div style="border-right:1px black solid; height: 220px; width: 40px">
+            <div style="margin-top: 17px;">
                 {{factor}}
             </div>
-            <div style="margin-top: 175px;">
+            <div style="margin-top: 178px;">
                 0
             </div>
             </div>
@@ -13,10 +13,14 @@
             <app-bar [barHeight]= "data_item" [factor]=factor style="margin-left: 10px;"></app-bar>
         </ng-container>
     </div>
-    <div style="margin-left: 15px; border-top: 1px black solid; width: 1000px">
-        <ng-container *ngFor="let label of labels">
-            <span style="padding-left: 23px;">{{label}}</span>
-        </ng-container>
+    <div style="margin-left: 35px; border-top: 1px black solid; width: 950px">
+        <div style="height: 6px"></div>
+        <div style="margin-left: 8px;">
+            <ng-container *ngFor="let label of labels">
+                <span style="padding-left: 22px;">{{label}}</span>
+            </ng-container>
+        </div>
     </div>
 </div>
+
 
