@@ -1,12 +1,22 @@
-<div style="margin-left: 50px; display: flex;">
-    <ng-container *ngFor="let data_item of data">
-        <app-bar [barHeight]= "data_item" style="margin-left: 10px;"></app-bar>
-    </ng-container>
 
-
-    <app-bar [barHeight]= "0.5" style="margin-left: 10px;"></app-bar>
-    <app-bar [barHeight]= "0.8" style="margin-left: 10px;"></app-bar>
-    <app-bar [barHeight]= "0.5" style="margin-left: 10px;"></app-bar>
-
+<div style="margin-left: 50px;">
+    <div style="display: flex;">
+        <div style="border-right:1px black solid; height: 200px;">
+            <div style="margin-right: 5px; margin-top: 30px;">
+                73
+            </div>
+            <div style="margin-top: 75px;">
+                35
+            </div>
+            <div style="margin-top: 50px;">
+                0
+            </div>
+            </div>
+        <ng-container *ngFor="let data_item of data">
+            <app-bar [barHeight]= "data_item" style="margin-left: 10px;"></app-bar>
+        </ng-container>
+    </div>
+    <div style="margin-left: 15px; border-top: 1px black solid; width: 700px">        
+    </div>
 </div>
 
