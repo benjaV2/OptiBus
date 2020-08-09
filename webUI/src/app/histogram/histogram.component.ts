@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-histogram',
@@ -8,19 +8,33 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HistogramComponent implements OnInit {
 
-  data = [0.2, 0.3, 0.4, 0.5, 0 ,0.7, 0.8, 0.6, 0.5, 0.4, 0.3, 0.1, 0.05];
+  data;
+  factor = 1;
+  labels = ["24","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    let url = "http://localhost:8000/data"
-    this.http.get(url).subscribe(      
+    const headers = new HttpHeaders()
+      .append('Content-Type', 'application/json')
+      .append('Access-Control-Allow-Headers', 'Content-Type')
+      .append('Access-Control-Allow-Methods', 'GET')
+      .append('Access-Control-Allow-Origin', '*');
+    
+    let url = "http://benja.com:8000/data"
+    this.http.get(url, {headers}).subscribe(      
       res => {
-        debugger;
-        console.log(res);
+        //debugger;
+        this.data = res;        
+        for (let number of this.data){
+          if (number > this.factor) {
+            this.factor = number
+          }
+
+        }
       }
 
     );
-    console.log(this.data);
+    
   }
 
 }

@@ -7,11 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BarComponent implements OnInit {
   @Input() barHeight;
+  @Input() factor;
   constructor() { }
 
   ngOnInit() {
-    console.log("BAR!");
-    console.log(this.barHeight);
+    // console.log("BAR!");
+    // console.log(this.barHeight);
   }
 
 }
