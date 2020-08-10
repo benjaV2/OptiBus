@@ -7,7 +7,7 @@ import {ApiService} from './api.service'
   styleUrls: ['./histogram.component.css']
 })
 export class HistogramComponent implements OnInit {
-  x_axis_title: string = "hour of day"
+  x_axis_title: string = "Hour of day"
   y_axis_title: string = "# of trips"
   data;
   factor: number = 1;
