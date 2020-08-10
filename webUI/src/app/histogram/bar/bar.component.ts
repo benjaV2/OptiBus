@@ -6,13 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./bar.component.css']
 })
 export class BarComponent implements OnInit {
-  @Input() barHeight;
-  @Input() factor;
+  @Input() barHeight: number;
+  @Input() factor: number;
   constructor() { }
 
   ngOnInit() {
-    // console.log("BAR!");
-    // console.log(this.barHeight);
   }
 
 }

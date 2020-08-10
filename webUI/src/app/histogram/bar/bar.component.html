@@ -1,9 +1,12 @@
 
 <div>
-    <div style="width:28px" [style.height] = "(1 - barHeight/factor) * 200 + 20 + 'px'">
+    <div class="upper_bar" [style.height] = "(1 - barHeight/factor) * 200 + 'px'">
 
     </div>
-    <div style="background:blue; width:28px" [style.height] = "(barHeight/factor) * 200 + 'px'" title="{{barHeight}}">
+    <div class="bar_label">
+        {{barHeight}}
+    </div>
+    <div class="bar" [style.height] = "(barHeight/factor) * 200 + 'px'">
 
     </div>
 </div>

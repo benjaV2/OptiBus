@@ -1,0 +1,13 @@
+.bar {
+    background-color: blue;
+    width: 28px;
+}
+
+.upper_bar {
+    width: 28px;
+}
+
+.bar_label {
+    font-size: small;
+    text-align: center;
+}

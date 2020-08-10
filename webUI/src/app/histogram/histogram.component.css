@@ -1,0 +1,26 @@
+
+.y_axis_title {
+    font-weight: bold;
+}
+
+.x_axis_title {
+    text-align: center;
+}
+
+.x_axis_label {
+    font-weight: bold;
+    padding-left: 22px;
+}
+
+.bottom_axis {
+    margin-left: 64px;
+    border-top: 1px black solid;
+    width: 950px;
+}
+
+.left_axis {
+    height: 146px;
+    width: 70px;
+    text-align: center;
+    padding-top: 70px;
+}

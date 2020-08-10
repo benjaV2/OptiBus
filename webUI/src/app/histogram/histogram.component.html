@@ -1,24 +1,22 @@
 
 <div *ngIf="data" style="margin-left: 50px;">
     <div style="display: flex;">
-        <div style="border-right:1px black solid; height: 220px; width: 40px">
-            <div style="margin-top: 17px;">
-                {{factor}}
-            </div>
-            <div style="margin-top: 178px;">
-                0
-            </div>
-            </div>
+        <div class="left_axis">
+            <span class="y_axis_title">{{y_axis_title}}</span>
+        </div>
         <ng-container *ngFor="let data_item of data">
             <app-bar [barHeight]= "data_item" [factor]=factor style="margin-left: 10px;"></app-bar>
         </ng-container>
     </div>
-    <div style="margin-left: 35px; border-top: 1px black solid; width: 950px">
+    <div class="bottom_axis">
         <div style="height: 6px"></div>
         <div style="margin-left: 8px;">
             <ng-container *ngFor="let label of labels">
-                <span style="padding-left: 22px;">{{label}}</span>
+                <span class="x_axis_label">{{label}}</span>
             </ng-container>
+        </div>
+        <div class="x_axis_title">
+            <h3>{{x_axis_title}}</h3>
         </div>
     </div>
 </div>
